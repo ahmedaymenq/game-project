@@ -1,0 +1,210 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 250px;
+}
+button:hover {
+    background-color: #3a70b2;
+}
+button:active {
+    transform: scale(0.98);
+}
+input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.message-box {
+    background-color: #e3f2fd;
+    border-left: 5px solid #4a90e2;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: right;
+    font-size: 1.2em;
+}
+#player-setup-form input {
+    display: block;
+    margin: 10px auto;
+}
+.hidden {
+    display: none;
+}
+.vote-options button {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    background-color: #00bcd4;
+}
+.vote-options button:hover {
+    background-color: #0097a7;
+}
+.correct-guess {
+    background-color: #4CAF50 !important;
+    animation: pulse-green 0.5s ease-in-out infinite alternate;
+}
+.wrong-guess {
+    background-color: #F44336 !important;
+}
+.disabled-btn {
+    pointer-events: none;
+    opacity: 0.6;
+}
+@keyframes pulse-green {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+#use-previous-btn {
+    background-color: #4CAF50;
+}
+#use-previous-btn:hover {
+    background-color: #45a049;
+}
+#start-new-btn {
+    background-color: #00bcd4;
+}
+#start-new-btn:hover {
+    background-color: #0097a7;
+}
+.secret-info {
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+}
+.secret-animal {
+    color: #2e7d32;
+    background-color: #f0f2f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.animal-props {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    border: 1px solid #c8e6c9;
+    font-size: 1em;
+    color: #388e3c;
+    text-align: center;
+}
+.animal-props strong {
+    color: #1b5e20;
+    margin-bottom: 5px;
+    display: block;
+}
+#animal-info {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: right;
+    direction: rtl;
+    border: 1px solid #e0e0e0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+#animal-info:not(.hidden) {
+    max-height: 450px;
+    opacity: 1;
+}
+#animal-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 350px;
+    overflow-y: auto;
+    margin: 0;
+}
+#animal-list li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s;
+}
+#animal-list li:hover {
+    background-color: #eef5fd;
+}
+#animal-list li:last-child {
+    border-bottom: none;
+}
+#animal-list li strong {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+#animal-list li span {
+    color: #555;
+    font-size: 0.9em;
+}
+#show-info-btn {
+    background: linear-gradient(45deg, #f7a23c, #e96b34);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 15px rgba(247, 162, 60, 0.4);
+}
+#show-info-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 162, 60, 0.6);
+}
+#animal-search {
+    width: 90%;
+    padding: 10px 15px;
+    margin: 10px auto 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1em;
+    text-align: right;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}

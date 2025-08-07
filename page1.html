@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة برا السالفة</title>
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <div class="container" id="main-container">
+        <h1 id="game-title">لعبة برا السالفة</h1>
+        <div id="game-area">
+            <p>لعبة تخمين ممتعة. هل ستكون برا السالفة؟</p>
+            <button id="start-btn">ابدأ اللعبة</button>
+        </div>
+        <div id="player-setup-area" class="hidden">
+            <form id="player-setup-form">
+                <p>أدخل عدد اللاعبين (3 إلى 10):</p>
+                <input type="number" id="num-players" min="3" max="10" value="3" required>
+                <button type="submit">تأكيد</button>
+            </form>
+        </div>
+        <div id="animal-info" class="hidden">
+            <h3>قائمة الحيوانات وصفاتها</h3>
+            <p>يمكنك استخدام هذه القائمة لمراجعة الحيوانات وصفاتها قبل بدء اللعبة. سيساعدك هذا على الإجابة على الأسئلة بذكاء!</p>
+            <input type="text" id="animal-search" placeholder="ابحث عن حيوان...">
+            <ul id="animal-list"></ul>
+        </div>
+        <button id="show-info-btn">شاهد الحيوانات وصفاتها</button>
+    </div>
+
+    <audio id="button-click-sound" src="sounds/button_click.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="sounds/win.mp3" preload="auto"></audio>
+    <audio id="lose-sound" src="sounds/los.mp3" preload="auto"></audio>
+
+    <script src="page3.js"></script>
+</body>
+</html>
